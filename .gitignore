@@ -10,6 +10,12 @@
 *.dll
 *.dylib
 
+
+/x64/*
+*.log
+/.vs/*
+*.tlog
+
 # Qt-es
 object_script.*.Release
 object_script.*.Debug
