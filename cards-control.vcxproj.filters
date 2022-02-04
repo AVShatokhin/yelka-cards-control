@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="root.cpp">
+      <Filter>Source Files\backEnd</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsListModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="qml.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MyToolBar.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="main.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="MyMenuBar.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="MyHSplitter.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="MyListView.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="MyWindowInitCSV.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="MyOpenFileDialog.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+    <None Include="MySaveFileDialog.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Front-End Files">
+      <UniqueIdentifier>{8ce1286d-3ad7-4d81-9097-e783239dcc64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\backEnd">
+      <UniqueIdentifier>{4a19978b-af49-446a-8556-2cef3803a51c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\backEnd">
+      <UniqueIdentifier>{3fa91d15-bf73-4cba-9bf0-8d8f74c196a4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="root.h">
+      <Filter>Header Files\backEnd</Filter>
+    </QtMoc>
+    <QtMoc Include="CardsListModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

@@ -1,9 +1,49 @@
-import QtQuick 2.9
-import QtQuick.Window 2.2
+import QtQml
 
-Window {
-    visible: true
+import QtQuick
+import QtQuick.Controls
+
+import QtQuick.Layouts
+
+
+ApplicationWindow {
+    id: mainWindow
+    Connections {
+           target: backEnd
+    }
+   
+    Connections {
+           target: cardsModel
+    }
+
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    visible: true
+    title: qsTr("YELKA - Cards Processing Center")
+
+    menuBar: MyMenuBar { }
+    footer: MyToolBar { }
+    
+    MyOpenFileDialog { 
+        id: openFileDialog
+    }
+    
+    MySaveFileDialog { 
+        id: saveFileDialog
+    }
+
+    MyHSplitter { 
+        anchors.fill: parent
+        leftItem: MyListView {             
+            anchors.fill: parent              
+        } 
+        //rightItem : Text 
+        //{ 
+        //    text: "test"
+        //    anchors.centerIn: parent
+        //}
+    }
+
+    MyWindowInitCSV { id: initCSV }
 }
+

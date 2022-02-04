@@ -1,5 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>MyToolBar.qml</file>
+        <file>MyMenuBar.qml</file>
+        <file>MyHSplitter.qml</file>
+        <file>MyListView.qml</file>
+        <file>MyWindowInitCSV.qml</file>
+        <file>yelka_icon_transparent.png</file>
+        <file>MyOpenFileDialog.qml</file>
+        <file>MySaveFileDialog.qml</file>
     </qresource>
 </RCC>
