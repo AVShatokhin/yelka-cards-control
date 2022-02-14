@@ -34,14 +34,20 @@ ApplicationWindow {
 
     MyHSplitter { 
         anchors.fill: parent
-        leftItem: MyListView {             
-            anchors.fill: parent              
-        } 
-        //rightItem : Text 
-        //{ 
-        //    text: "test"
-        //    anchors.centerIn: parent
-        //}
+        leftItem: myListView 
+        rightItem : myControlBlock
+    }
+
+
+    MyListView {                         
+        id: myListView
+        anchors.fill: parent              
+    }
+
+    MyControlBlock
+    {             
+        id: myControlBlock
+        anchors.fill: parent
     }
 
     MyWindowInitCSV { id: initCSV }

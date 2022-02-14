@@ -9,5 +9,6 @@
         <file>yelka_icon_transparent.png</file>
         <file>MyOpenFileDialog.qml</file>
         <file>MySaveFileDialog.qml</file>
+        <file>MyControlBlock.qml</file>
     </qresource>
 </RCC>

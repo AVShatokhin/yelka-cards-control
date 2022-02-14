@@ -37,6 +37,9 @@
     <None Include="MySaveFileDialog.qml">
       <Filter>Front-End Files</Filter>
     </None>
+    <None Include="MyControlBlock.qml">
+      <Filter>Front-End Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
