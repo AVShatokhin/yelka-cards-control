@@ -38,7 +38,6 @@ ApplicationWindow {
         rightItem : myControlBlock
     }
 
-
     MyListView {                         
         id: myListView
         anchors.fill: parent              

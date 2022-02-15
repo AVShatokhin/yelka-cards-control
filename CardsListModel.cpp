@@ -12,6 +12,10 @@ CardsListModel::~CardsListModel()
 
 QVariant CardsListModel::data(const QModelIndex& index, int role) const
 {
+	if (!index.isValid()) {
+		return QVariant();
+	}
+
 	switch (role) {
 	case 100:
 		return index.row() + 1;
@@ -29,9 +33,42 @@ QVariant CardsListModel::data(const QModelIndex& index, int role) const
 	return QVariant();
 }
 
+bool CardsListModel::setData(const QModelIndex& index, const QVariant& value, int role)
+{
+	item __item;
+
+	if (!index.isValid()) {
+		return false;
+	}
+
+	switch (role) {
+	case 103:
+		__item = _list->at(index.row());
+		__item.uid = value.toString();
+		_list->replace(index.row(), __item);
+		break;
+	default:
+		return false;
+	}
+
+	setEdited(true);
+	emit dataChanged(index, index, QVector<int>() << role);
+
+	return true;
+}
+
 int CardsListModel::rowCount(const QModelIndex&) const
 {
 	return _list->size();
+}
+
+Qt::ItemFlags CardsListModel::flags(const QModelIndex& index) const
+{
+	if (!index.isValid())
+		return Qt::ItemIsEnabled;
+	
+	return QAbstractListModel::flags(index) | Qt::ItemIsEditable;
+	//return Qt::ItemFlags();
 }
 
 QHash<int, QByteArray> CardsListModel::roleNames() const
@@ -88,12 +125,12 @@ void CardsListModel::saveFile(QUrl file)
 
 void CardsListModel::saveFile()
 {
-	qDebug() << _fileName;
+	//qDebug() << _fileName;
 	
 	QFile file(_fileName);
 
 	if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
-		return;
+	return;
 
 	QTextStream out(&file);
 
@@ -105,8 +142,11 @@ void CardsListModel::saveFile()
 	setEdited(false);
 }
 
+
+
 void CardsListModel::initModel(int startCardID, int count)
 {
+	beginResetModel();
 	_list->clear();
 	for (int __i = 0; __i < count; __i++) {
 		item __newItem;		

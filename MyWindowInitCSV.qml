@@ -97,7 +97,7 @@ Window {
                 onClicked: () => {
                     if (cardsCount.text == "") return;
                     if (firstCard.text == "") return;
-
+                    myListView.lV.currentIndex=-1;
                     cardsModel.initModel(firstCard.text, cardsCount.text); 
                     initCSV.visible = false;
                 }

@@ -28,15 +28,13 @@ Item {
 
         Rectangle { 
             id: leftPlaceHolder
-            //border.width: 1  
-            
             SplitView.preferredWidth: parent.width/100 * ratio
+            SplitView.minimumWidth: 230
         }
 
         Rectangle {
-            id: rightPlaceHolder
-            
-            //border.width: 1
+            id: rightPlaceHolder            
+            SplitView.minimumWidth: 270
         }
         
         Binding {
@@ -50,13 +48,5 @@ Item {
             target: rightItem
             value: rightPlaceHolder
         }
-
-        //Binding {
-        //    property: "text"
-        //    target: test
-        //    value: leftPlaceHolder.SplitView.preferredWidth
-        //    restoreMode: Binding.RestoreNone
-        //    when: splitView.resizing
-        //}
     }
 }

@@ -27,8 +27,9 @@ public:
 	~CardsListModel();
 
     QVariant data(const QModelIndex& index, int role) const override;
-
+    bool setData(const QModelIndex& index, const QVariant& value, int role);
     int rowCount(const QModelIndex & = QModelIndex()) const override;
+    Qt::ItemFlags flags(const QModelIndex& index) const;
 
     QHash<int, QByteArray> roleNames() const override;
     
@@ -49,13 +50,13 @@ public:
         _notempty = e;
         notEmptyChanged();
     }
-    
+
 public slots:
     void initModel(int startCardID, int count);
     void loadFile(QUrl file);
     void saveFile(QUrl file);
     void saveFile();
-
+    
 signals:
     void notEmptyChanged();
     void editedChanged();

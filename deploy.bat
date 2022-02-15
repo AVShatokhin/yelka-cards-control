@@ -1,0 +1,1 @@
+windeployqt.exe --release "D:/YELKA+CardsControl/ycc-release/cards-control.exe" --qmldir "D:/YELKA+CardsControl/yelka-cards-control"
