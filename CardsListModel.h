@@ -51,12 +51,15 @@ public:
         notEmptyChanged();
     }
 
+    
+
 public slots:
     void initModel(int startCardID, int count);
     void loadFile(QUrl file);
     void saveFile(QUrl file);
     void saveFile();
-    
+    void convertToENG();
+
 signals:
     void notEmptyChanged();
     void editedChanged();

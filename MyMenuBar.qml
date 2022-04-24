@@ -39,6 +39,15 @@ MenuBar {
                 onTriggered: saveFileDialog.open()
                 }
             MenuSeparator { }
+            Action { 
+                text: qsTr("Convert UIDs to &ENG") 
+                shortcut: "Ctrl+E"
+                enabled: true
+                onTriggered: { 
+                    console.log("aa");
+                    cardsModel.convertToENG(); }
+                }
+            MenuSeparator { }
             Action {
                 text: qsTr("&Quit")
                 onTriggered: backEnd.exit()

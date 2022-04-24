@@ -81,6 +81,25 @@ QHash<int, QByteArray> CardsListModel::roleNames() const
 	};
 }
 
+void CardsListModel::convertToENG()
+{
+	beginResetModel();
+	
+	for (int i = 0; i != _list->size(); i++) {
+		item __item = _list->at(i);
+		QString __tmp = __item.uid;
+		__tmp = __tmp.replace(QChar(1060), "A");
+		__tmp = __tmp.replace(QChar(1048), 'B');
+		__tmp = __tmp.replace(QChar(1057), 'C');
+		__tmp = __tmp.replace(QChar(1042), 'D');
+		__tmp = __tmp.replace(QChar(1059), 'E');
+		__tmp = __tmp.replace(QChar(1040), 'F');
+		__item.uid = __tmp;
+		_list->replace(i, __item);
+	}
+	endResetModel();
+}
+
 void CardsListModel::loadFile(QUrl file)
 {
 	setFileName(file.path().replace(0, 1, ""));
