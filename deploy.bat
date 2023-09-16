@@ -1,1 +1,1 @@
-windeployqt.exe --release "D:/YELKA+CardsControl/ycc-release/cards-control.exe" --qmldir "D:/YELKA+CardsControl/yelka-cards-control"
+C:/Qt/Qt6.2.2/6.2.2/msvc2019_64/bin/windeployqt.exe --release "D:/YELKA+CardsControl/ycc-release/cards-control.exe" --qmldir "D:/YELKA+CardsControl/yelka-cards-control"
